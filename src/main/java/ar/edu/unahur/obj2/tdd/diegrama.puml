@@ -1,0 +1,23 @@
+@startuml
+
+class CajaFuerte {
+    - codigo : String
+    - abierta : boolean
+
+    + CajaFuerte(codigoInicial : String)
+    + abrir(codigoIngresado : String) : void
+    + cerrar(nuevoCodigo : String) : void
+    + estaAbierta() : boolean
+}
+
+class Usuario {
+    - nombre : String
+
+    + Usuario(nombre : String)
+    + abrirCaja(caja : CajaFuerte, codigo : String) : void
+    + cerrarCaja(caja : CajaFuerte, nuevoCodigo : String) : void
+}
+
+Usuario --> CajaFuerte : usa
+
+@enduml
