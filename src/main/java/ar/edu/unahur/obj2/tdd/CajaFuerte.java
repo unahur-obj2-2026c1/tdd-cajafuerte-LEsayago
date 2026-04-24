@@ -25,10 +25,6 @@ public class CajaFuerte {
         return this.abierta;
     }
 
-    public boolean estaCerrada() {
-        return !this.abierta;
-    }
-
     private boolean codigoEsCorrecto(Integer codigoIngresado) {
         return this.codigo.equals(codigoIngresado);
     }

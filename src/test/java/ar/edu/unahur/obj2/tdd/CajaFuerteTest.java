@@ -1,5 +1,6 @@
 package ar.edu.unahur.obj2.tdd;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -20,10 +21,10 @@ public class CajaFuerteTest {
     Cuando cierro la caja fuerte con un codigo
     Entonces la caja fuerte esta cerrada */
     @Test
-    void queLaCajaFuerteEsteAbiertaYLaPedaCerrarConUnCodigo() {
+    void queLaCajaFuerteLaPuedaCerrarConUnCodigo() {
         CajaFuerte caja = new CajaFuerte();
         caja.cerrar(1234);
-        assertTrue(caja.estaCerrada());
+        assertFalse(caja.estaAbierta());
 
     }
     /* 3. Apertura de caja fuerte con codigo correcto
